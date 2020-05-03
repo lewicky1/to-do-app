@@ -1,0 +1,81 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap";
+
+$main-background: #b0ceff;
+$light-grey: #d0d0d0;
+$close-red: #e80505;
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: Montserrat, sans-serif;
+  background-color: $main-background;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.task-form {
+  text-align: center;
+
+  input, button {
+    border-radius: 0.5rem;
+  }
+
+  input[type="text"] {
+    line-height: 1.1rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+    margin-left: 1rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.task-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 0.5rem 1rem;
+
+  .transparent {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .item {
+    flex-basis: 15%;
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    min-height: 80px;
+    position: relative;
+    height: fit-content;
+
+    img {
+      max-width: 300px;
+      max-height: 300px;
+      width: 100%;
+      margin: auto;
+    }
+
+    span {
+      position: absolute;
+      right: 0.7rem;
+      bottom: 0.5rem;
+      color: $close-red;
+      cursor: pointer;
+    }
+  }
+}
